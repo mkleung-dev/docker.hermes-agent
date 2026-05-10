@@ -1,0 +1,12 @@
+services:
+  hermes:
+    image: ${IMAGE:-nousresearch/hermes-agent}
+    container_name: ${CONTAINER_NAME:-hermes}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    volumes:
+      - ${DATA_VOLUME:-hermes-data}:/opt/data
+    command: ["gateway", "run"]
+
+volumes:
+  hermes-data:
+    name: ${DATA_VOLUME:-hermes-data}

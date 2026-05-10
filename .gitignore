@@ -1,0 +1,13 @@
+# Local environment overrides
+.env
+
+# Backup artifacts
+backups/
+*.tar
+*.tar.gz
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+.DS_Store
